@@ -1,0 +1,28 @@
+/**
+ * The Simulation class runs a simulation of the Building object
+ * @author Ryan Xu
+ *
+ */
+
+public class Simulation {
+	/**
+	 * Runs the simulation
+	 * @param args
+	 */
+    public static void main(String[] args) {
+    	Building b = new Building(12, "Volen"); //test create building
+    	
+    	Person terriblePerson = new Person("Terrible", "Person");
+    	terriblePerson.enterBuilding(b, 99); //test for max floors
+    	
+    	Person jamesClark = new Person("James", "Clark");
+    	jamesClark.enterBuilding(b, 6);
+    	jamesClark.enterBuilding(b, 7); //test for entering twice
+    	
+    	Person michaelGolitsyn = new Person("Michael", "Golitsyn");
+    	michaelGolitsyn.enterBuilding(b, 6); //test for floor counter
+    	
+    	b.startElevator(); //test elevator
+    	
+    }
+}

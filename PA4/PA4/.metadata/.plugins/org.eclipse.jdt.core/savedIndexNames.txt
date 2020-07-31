@@ -1,0 +1,11 @@
+INDEX VERSION 1.131+/Users/golitsyn/Box Sync/CS/COSI 12B/1192/PAs/PA3/.metadata/.plugins/org.eclipse.jdt.core
+335163389.index
+3263730508.index
+3898638516.index
+3998281970.index
+412433746.index
+2458793303.index
+2519082255.index
+2884559201.index
+854044891.index
+168376720.index
