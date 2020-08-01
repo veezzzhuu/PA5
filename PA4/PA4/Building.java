@@ -9,6 +9,8 @@
 public class Building {
 	Floor[] floors;
 	Elevator elevator;
+	Elevator elevator1;
+	int people;
     // Fields
     // TODO: what object instances should you keep track of?
 
@@ -21,8 +23,10 @@ public class Building {
      */
     public Building() {
         // TODO: implement me!
-    	elevator = new Elevator(this);
+    	elevator = new Elevator();
+    	elevator1 = new Elevator();
     	floors = new Floor[100];
+    	people=0;
     	for(int i=0; i< floors.length; i++) {
 			floors[i] = new Floor(i+1);
 			//the i+1 is the parameter that represent the number of the floor
@@ -50,7 +54,12 @@ public class Building {
 		}
 		if(firstTime == true) { //if the person is using the elevator for the first time, create the job
 			elevator.createJob(person, floor);
+			people++;
+			if(people>4)
+			{
+				elevator1.createJob(person,floor);
 			}
+		}
 			return firstTime;
     }
 
@@ -60,6 +69,7 @@ public class Building {
      */
     public void startElevator() {
     	this.elevator.processAllJobs();
+        people=people-elevator.people;
 
     }
 
