@@ -21,7 +21,7 @@ public class Elevator {
 	int currJobIndex; //current job Index
 	int currFloor; //the current location of the floor
 	Building building;
-
+    int people;
 
     // Constructor
 
@@ -29,12 +29,12 @@ public class Elevator {
      *  Make sure to instantiate the required objects, such as the array
      *  of jobs that the elevator needs to have.
      */
-    public Elevator(Building b) {
+    public Elevator() {
     	jobs = new Job[100];
 		jobIndex = 0;
 		currJobIndex = 0;
 		currFloor = 1; //lift starts at stop 1
-		building = b;
+		people=0;
 
     }
 
@@ -55,8 +55,11 @@ public class Elevator {
                     position in the array. */
     	//this is the job taking individual to the desired stop
     			jobs[jobIndex] = new Job(person, floor); 
-    			jobIndex++;
-    			
+    			if(jobs[jobIndex].num>4)
+    			{
+    				jobIndex++;
+    			}			
+    			people++;
     			return true;
 
     }
@@ -72,6 +75,7 @@ public class Elevator {
 		for(this.currFloor = currFloor-2; this.currFloor>=1; this.currFloor--) {
 			System.out.println("The lift is on stop "+ this.currFloor);
 		}
+		people=people-job.num;
 
     }
 
@@ -99,7 +103,6 @@ public class Elevator {
 		//set the job index back to 0
 		this.jobIndex = 0; 
 		
-
     }
 
     /**
