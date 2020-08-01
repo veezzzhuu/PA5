@@ -41,7 +41,7 @@ public class Building {
      *  @param person the person that has requested access to the building
      *  @param floor the number of the desired floor
      */
-    public boolean enterElevator(Person person, int floor) {
+    public boolean enterElevatorLine(Person person, int floor) {
         //check if the person has used the elevator before
     	boolean firstTime = true;
 		for(int i=0; i<floors.length; i++) { //for every floor

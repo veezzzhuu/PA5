@@ -21,7 +21,6 @@ public class Job {
     public Job(Person per, int floor) {
 		person = per;
 		this.floor = floor;
-        num++;
     }
 
     // Methods

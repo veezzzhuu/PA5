@@ -54,12 +54,10 @@ public class Elevator {
                     you will be able to add a job at the next
                     position in the array. */
     	//this is the job taking individual to the desired stop
+    			
+   
     			jobs[jobIndex] = new Job(person, floor); 
-    			if(jobs[jobIndex].num>4)
-    			{
-    				jobIndex++;
-    			}			
-    			people++;
+    			jobIndex++;
     			return true;
 
     }
@@ -75,7 +73,7 @@ public class Elevator {
 		for(this.currFloor = currFloor-2; this.currFloor>=1; this.currFloor--) {
 			System.out.println("The lift is on stop "+ this.currFloor);
 		}
-		people=people-job.num;
+		
 
     }
 

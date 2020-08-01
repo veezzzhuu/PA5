@@ -35,7 +35,7 @@ public class Person {
      */
     public boolean enterBuilding(Building building, int floor) {
     	boolean valid = true;
-    	valid = building.enterElevator(this, floor);
+    	valid = building.enterElevatorLine(this, floor);
     	if(valid == true) {
     		this.currLocation = 200; //stands for in lobby
     	}else {
